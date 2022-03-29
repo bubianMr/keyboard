@@ -79,7 +79,7 @@ public class BaseKeyboardUtils {
         mConBgView = view.findViewById(R.id.con_bg_view);
 
         mPopupWindow = new PopupWindow(view, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, false);
-        PopUnRecordProxy.instance().unRecord(mPopupWindow);
+
 
         changeKeyboard(0);
 
@@ -142,6 +142,7 @@ public class BaseKeyboardUtils {
         return mBaseKeyboardUtils;
     }
 
+
     /**
      * 设置点击外部是否可隐藏键盘
      * true=点击外部隐藏
@@ -182,6 +183,17 @@ public class BaseKeyboardUtils {
     }
 
     /**
+     * 设置禁止录屏
+     * @return
+     */
+    public BaseKeyboardUtils setCannotRecord() {
+        PopUnRecordProxy.instance().unRecord(mPopupWindow);
+        //禁止截屏
+        finActivity(mContext).getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+        return mBaseKeyboardUtils;
+    }
+
+    /**
      * 显示键盘
      *
      * @param view 依附控件
@@ -191,8 +203,6 @@ public class BaseKeyboardUtils {
 //            mPopupWindow.dismiss();
             return;
         }
-        //禁止截屏
-        finActivity(mContext).getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         mPopupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
     }
 

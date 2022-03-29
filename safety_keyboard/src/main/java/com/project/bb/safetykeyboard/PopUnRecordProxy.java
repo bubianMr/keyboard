@@ -53,13 +53,15 @@ public class PopUnRecordProxy implements InvocationHandler {
 
     }
 
+
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         try {
             //拦截方法mWindowManager.addView(View view,ViewGroup.LayoutParams params)
             if (method != null && method.getName() != null && method.getName().equals("addView") && args != null && args.length == 2) {
                 WindowManager.LayoutParams params = (WindowManager.LayoutParams) args[1];
-                setUnScreenRecord(params);
+                setAllowScreenRecord(params);
+//                setUnScreenRecord(params);
             }
         } catch (Exception ec) {
             ec.printStackTrace();
