@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/demo/Keyboard/app/src/main/res/layout/activity_main.xml" value="0.12083333333333333" />
+        <entry key="..\:/demo/Keyboard/safety_keyboard/src/main/res/drawable/selector_keyboard.xml" value="0.25333333333333335" />
+        <entry key="..\:/demo/Keyboard/safety_keyboard/src/main/res/drawable/selector_text_color.xml" value="0.25333333333333335" />
+        <entry key="..\:/demo/Keyboard/safety_keyboard/src/main/res/drawable/shape_select_bg.xml" value="0.25333333333333335" />
+        <entry key="..\:/demo/Keyboard/safety_keyboard/src/main/res/drawable/shape_un_select_bg.xml" value="0.25333333333333335" />
+        <entry key="..\:/demo/Keyboard/safety_keyboard/src/main/res/layout/item_keyboard_layout.xml" value="0.1793478260869565" />
+        <entry key="..\:/demo/Keyboard/safety_keyboard/src/main/res/layout/layout_keyboard.xml" value="0.10778985507246377" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
