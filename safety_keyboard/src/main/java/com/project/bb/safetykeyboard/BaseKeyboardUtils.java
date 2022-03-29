@@ -175,6 +175,11 @@ public class BaseKeyboardUtils {
         return mBaseKeyboardUtils;
     }
 
+    /**
+     * 设置键盘默认值
+     * @param str
+     * @return
+     */
     public BaseKeyboardUtils setInputMsg(String str) {
         if (str != null) {
             inputMsg = str;
@@ -184,6 +189,7 @@ public class BaseKeyboardUtils {
 
     /**
      * 设置禁止录屏
+     *
      * @return
      */
     public BaseKeyboardUtils setCannotRecord() {
@@ -255,7 +261,7 @@ public class BaseKeyboardUtils {
     }
 
     /**
-     * 设置键盘监听事件
+     * 设置键盘点击监听事件
      *
      * @param onKeyBoardClickListener
      * @return
@@ -432,6 +438,9 @@ public class BaseKeyboardUtils {
                 mRecyclerKey.setAdapter(numberAdapter);
 
                 numberAdapter.setOnKeyBoardClickListener((msg, position) -> {
+                    if (isOnlyNumber && msg.equals(".")) {
+                        return;
+                    }
                     if (position == KeyDataUtils.getNumberMsg().size() - 1) {
                         //删除
                         if (inputMsg.length() > 0) {

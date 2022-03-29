@@ -22,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         phone.setOnClickListener(v -> {
             BaseKeyboardUtils.getInstance(this).dismiss();
-            BaseKeyboardUtils.getInstance(this).setInputHint("手机号专属安全键盘")
+            BaseKeyboardUtils.getInstance(this)
+                    .setTitle("手机号专属安全键盘")
                     .setInputMaxLength(11)
                     .setIsHaveInputBox(false)
                     .setOnlyNumber()
@@ -45,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
         keyboard.setOnClickListener(v -> {
             BaseKeyboardUtils.getInstance(this).dismiss();
-            BaseKeyboardUtils.getInstance(this).setInputHint("XX专属安全键盘")
+            BaseKeyboardUtils.getInstance(this)
+                    .setTitle("XX专属安全键盘")
                     .setInputMaxLength(15)
                     .setIsHaveInputBox(false)
                     .setKeyboardClickListener(new OnKeyBoardClickListener() {
@@ -67,7 +69,9 @@ public class MainActivity extends AppCompatActivity {
 
         inputKeyboard.setOnClickListener(v->{
             BaseKeyboardUtils.getInstance(this).dismiss();
-            BaseKeyboardUtils.getInstance(this).setInputHint("XX专属安全键盘")
+            BaseKeyboardUtils.getInstance(this)
+                    .setTitle("XX专属安全键盘")
+                    .setInputHint("这是输入提示")
                     .setInputMaxLength(15)
                     .setIsHaveInputBox(true)
                     .setOnDefineClickListener(value -> {
